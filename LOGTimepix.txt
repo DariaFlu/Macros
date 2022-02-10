@@ -1,0 +1,468 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.23/01                        https://root.cern |
+  | (c) 1995-2020, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Jan 03 2021, 23:52:00                 |
+  | From heads/master@v6-23-01-RF-binSampling-359-gfbe6b2bf34        |
+  | With                                                             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+
+Processing ProtonCounter.cc+...
+--------------------------------
+File Name: Cal_0mm_1c.dat.root
+Proton counting max: 3
+Cluster area: 24
+Cluster TOT: 1778
+TOT mean: 1013
+Mean area: 14
+Frame: 318
+Life time: 318
+
+N_TOT: 1.75518
+N_Area: 1.71429
+
+N_Mean: 2.15649
+Sigma N: 0.596686
+
+Proton flux: 1.22757
+Sigma flux: 0.339659
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_1d.dat.root
+Proton counting max: 208003
+Cluster area: 1.34344e+06
+Cluster TOT: 3.7211e+08
+TOT mean: 1755.79
+Mean area: 6.41086
+Frame: 2000
+Life time: 2000
+
+N_TOT: 211933
+N_Area: 209557
+
+N_Mean: 209831
+Sigma N: 1615.91
+
+Proton flux: 18991.7
+Sigma flux: 146.256
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_2.dat.root
+Proton counting max: 198728
+Cluster area: 1.29156e+06
+Cluster TOT: 3.67036e+08
+TOT mean: 1808.27
+Mean area: 6.42745
+Frame: 2000
+Life time: 2000
+
+N_TOT: 202976
+N_Area: 200945
+
+N_Mean: 200883
+Sigma N: 1734.94
+
+Proton flux: 18181.9
+Sigma flux: 157.029
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_3.dat.root
+Proton counting max: 133687
+Cluster area: 882107
+Cluster TOT: 2.52176e+08
+TOT mean: 1828.4
+Mean area: 6.51514
+Frame: 1000
+Life time: 1000
+
+N_TOT: 137922
+N_Area: 135393
+
+N_Mean: 135668
+Sigma N: 1739.8
+
+Proton flux: 24558.4
+Sigma flux: 314.938
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_4.dat.root
+Proton counting max: 205067
+Cluster area: 1.37264e+06
+Cluster TOT: 3.92139e+08
+TOT mean: 1842.24
+Mean area: 6.60408
+Frame: 1000
+Life time: 1000
+
+N_TOT: 212860
+N_Area: 207847
+
+N_Mean: 208591
+Sigma N: 3224.88
+
+Proton flux: 37759.1
+Sigma flux: 583.765
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_5.dat.root
+Proton counting max: 222960
+Cluster area: 1.51406e+06
+Cluster TOT: 4.40514e+08
+TOT mean: 1892.36
+Mean area: 6.67594
+Frame: 1000
+Life time: 1000
+
+N_TOT: 232786
+N_Area: 226794
+
+N_Mean: 227513
+Sigma N: 4043.41
+
+Proton flux: 41184.3
+Sigma flux: 731.935
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_6.dat.root
+Proton counting max: 290144
+Cluster area: 1.99635e+06
+Cluster TOT: 5.94153e+08
+TOT mean: 1943.95
+Mean area: 6.74809
+Frame: 1000
+Life time: 1000
+
+N_TOT: 305643
+N_Area: 295839
+
+N_Mean: 297209
+Sigma N: 6401
+
+Proton flux: 53800.5
+Sigma flux: 1158.7
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_7.dat.root
+Proton counting max: 286623
+Cluster area: 1.99476e+06
+Cluster TOT: 5.85853e+08
+TOT mean: 1901.84
+Mean area: 6.80383
+Frame: 1000
+Life time: 1000
+
+N_TOT: 308045
+N_Area: 293181
+
+N_Mean: 295950
+Sigma N: 8962.13
+
+Proton flux: 53572.7
+Sigma flux: 1622.32
+--------------------------------
+--------------------------------
+File Name: Cal_0mm_8.dat.root
+Proton counting max: 359924
+Cluster area: 2.51826e+06
+Cluster TOT: 7.59317e+08
+TOT mean: 1963.19
+Mean area: 6.83064
+Frame: 1000
+Life time: 1000
+
+N_TOT: 386777
+N_Area: 368672
+
+N_Mean: 371791
+Sigma N: 11182.3
+
+Proton flux: 67301.3
+Sigma flux: 2024.21
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_1.dat.root
+Proton counting max: 71165
+Cluster area: 476702
+Cluster TOT: 1.34261e+08
+TOT mean: 1842.94
+Mean area: 6.60782
+Frame: 1000
+Life time: 1000
+
+N_TOT: 72851.2
+N_Area: 72142.1
+
+N_Mean: 72052.8
+Sigma N: 691.289
+
+Proton flux: 13042.9
+Sigma flux: 125.137
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_2.dat.root
+Proton counting max: 124298
+Cluster area: 841597
+Cluster TOT: 2.37678e+08
+TOT mean: 1865.44
+Mean area: 6.70231
+Frame: 1000
+Life time: 1000
+
+N_TOT: 127411
+N_Area: 125568
+
+N_Mean: 125759
+Sigma N: 1278.12
+
+Proton flux: 22764.8
+Sigma flux: 231.364
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_3.dat.root
+Proton counting max: 153180
+Cluster area: 1.05485e+06
+Cluster TOT: 3.029e+08
+TOT mean: 1908.77
+Mean area: 6.79531
+Frame: 1000
+Life time: 1000
+
+N_TOT: 158688
+N_Area: 155232
+
+N_Mean: 155700
+Sigma N: 2273.02
+
+Proton flux: 28184.7
+Sigma flux: 411.461
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_4.dat.root
+Proton counting max: 37677
+Cluster area: 257027
+Cluster TOT: 7.4183e+07
+TOT mean: 1938.7
+Mean area: 6.75507
+Frame: 289
+Life time: 289
+
+N_TOT: 38264.3
+N_Area: 38049.5
+
+N_Mean: 37996.9
+Sigma N: 242.622
+
+Proton flux: 23799.9
+Sigma flux: 151.969
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_5.dat.root
+Proton counting max: 142492
+Cluster area: 975709
+Cluster TOT: 2.82662e+08
+TOT mean: 1931.92
+Mean area: 6.77036
+Frame: 1000
+Life time: 1000
+
+N_TOT: 146312
+N_Area: 144115
+
+N_Mean: 144306
+Sigma N: 1565.21
+
+Proton flux: 26122.2
+Sigma flux: 283.333
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_6.dat.root
+Proton counting max: 193084
+Cluster area: 1.34339e+06
+Cluster TOT: 3.9499e+08
+TOT mean: 1969.03
+Mean area: 6.86352
+Frame: 1000
+Life time: 1000
+
+N_TOT: 200602
+N_Area: 195728
+
+N_Mean: 196471
+Sigma N: 3113.68
+
+Proton flux: 35565.1
+Sigma flux: 563.637
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_7.dat.root
+Proton counting max: 259644
+Cluster area: 1.83175e+06
+Cluster TOT: 5.56467e+08
+TOT mean: 2044.28
+Mean area: 6.94174
+Frame: 1000
+Life time: 1000
+
+N_TOT: 272207
+N_Area: 263875
+
+N_Mean: 265242
+Sigma N: 5218.96
+
+Proton flux: 48013.9
+Sigma flux: 944.732
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_8.dat.root
+Proton counting max: 294562
+Cluster area: 2.10544e+06
+Cluster TOT: 6.30075e+08
+TOT mean: 2007.87
+Mean area: 7.03535
+Frame: 1000
+Life time: 1000
+
+N_TOT: 313803
+N_Area: 299266
+
+N_Mean: 302544
+Sigma N: 8190.13
+
+Proton flux: 54766.3
+Sigma flux: 1482.57
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_9.dat.root
+Proton counting max: 119766
+Cluster area: 808718
+Cluster TOT: 2.28749e+08
+TOT mean: 1862.77
+Mean area: 6.66805
+Frame: 1500
+Life time: 1500
+
+N_TOT: 122801
+N_Area: 121282
+
+N_Mean: 121283
+Sigma N: 1238.95
+
+Proton flux: 14636.4
+Sigma flux: 149.516
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_10.dat.root
+Proton counting max: 99562
+Cluster area: 675286
+Cluster TOT: 1.90666e+08
+TOT mean: 1864.46
+Mean area: 6.70032
+Frame: 1000
+Life time: 1000
+
+N_TOT: 102264
+N_Area: 100784
+
+N_Mean: 100870
+Sigma N: 1104.72
+
+Proton flux: 18259.4
+Sigma flux: 199.975
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_11.dat.root
+Proton counting max: 128715
+Cluster area: 880927
+Cluster TOT: 2.55309e+08
+TOT mean: 1928.29
+Mean area: 6.77476
+Frame: 1000
+Life time: 1000
+
+N_TOT: 132401
+N_Area: 130031
+
+N_Mean: 130382
+Sigma N: 1525.31
+
+Proton flux: 23601.7
+Sigma flux: 276.11
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_12.dat.root
+Proton counting max: 172077
+Cluster area: 1.18585e+06
+Cluster TOT: 3.39179e+08
+TOT mean: 1905.94
+Mean area: 6.80393
+Frame: 1000
+Life time: 1000
+
+N_TOT: 177959
+N_Area: 174289
+
+N_Mean: 174775
+Sigma N: 2425.71
+
+Proton flux: 31637.6
+Sigma flux: 439.1
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_13.dat.root
+Proton counting max: 166329
+Cluster area: 1.15359e+06
+Cluster TOT: 3.38715e+08
+TOT mean: 1960.33
+Mean area: 6.86418
+Frame: 1000
+Life time: 1000
+
+N_TOT: 172785
+N_Area: 168060
+
+N_Mean: 169058
+Sigma N: 2728.34
+
+Proton flux: 30602.7
+Sigma flux: 493.883
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_14.dat.root
+Proton counting max: 55002
+Cluster area: 390047
+Cluster TOT: 1.19674e+08
+TOT mean: 2050.8
+Mean area: 6.97072
+Frame: 1000
+Life time: 1000
+
+N_TOT: 58354.8
+N_Area: 55955
+
+N_Mean: 56437.3
+Sigma N: 1410.62
+
+Proton flux: 10216.2
+Sigma flux: 255.349
+--------------------------------
+--------------------------------
+File Name: Cal_05mm_15.dat.root
+Proton counting max: 265168
+Cluster area: 1.8809e+06
+Cluster TOT: 5.62675e+08
+TOT mean: 2007.86
+Mean area: 6.9816
+Frame: 1000
+Life time: 1000
+
+N_TOT: 280237
+N_Area: 269408
+
+N_Mean: 271604
+Sigma N: 6344.85
+
+Proton flux: 49165.6
+Sigma flux: 1148.54
+--------------------------------
+(int) 0

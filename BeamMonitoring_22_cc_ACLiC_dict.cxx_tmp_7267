@@ -1,0 +1,113 @@
+// Do NOT change. Changes will be lost next time file is generated
+
+#define R__DICTIONARY_FILENAME dIhomedIdnn1488dIDesktopdIRootdIDariaCalib2022Nov22dIMacrosdIBeamMonitoring_22_cc_ACLiC_dict
+#define R__NO_DEPRECATION
+
+/*******************************************************************/
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#define G__DICTIONARY
+#include "RConfig.h"
+#include "TClass.h"
+#include "TDictAttributeMap.h"
+#include "TInterpreter.h"
+#include "TROOT.h"
+#include "TBuffer.h"
+#include "TMemberInspector.h"
+#include "TInterpreter.h"
+#include "TVirtualMutex.h"
+#include "TError.h"
+
+#ifndef G__ROOT
+#define G__ROOT
+#endif
+
+#include "RtypesImp.h"
+#include "TIsAProxy.h"
+#include "TFileMergeInfo.h"
+#include <algorithm>
+#include "TCollectionProxyInfo.h"
+/*******************************************************************/
+
+#include "TDataMember.h"
+
+// The generated code does not explicitly qualifies STL entities
+namespace std {} using namespace std;
+
+// Header files passed as explicit arguments
+#include "/home/dnn1488/Desktop/Root/DariaCalib2022Nov22/Macros/./BeamMonitoring_22.cc"
+
+// Header files passed via #pragma extra_include
+
+namespace ROOT {
+   static TClass *Info_Dictionary();
+   static void Info_TClassManip(TClass*);
+   static void *new_Info(void *p = 0);
+   static void *newArray_Info(Long_t size, void *p);
+   static void delete_Info(void *p);
+   static void deleteArray_Info(void *p);
+   static void destruct_Info(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::Info*)
+   {
+      ::Info *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::Info));
+      static ::ROOT::TGenericClassInfo 
+         instance("Info", "BeamMonitoring_22.cc", 42,
+                  typeid(::Info), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &Info_Dictionary, isa_proxy, 4,
+                  sizeof(::Info) );
+      instance.SetNew(&new_Info);
+      instance.SetNewArray(&newArray_Info);
+      instance.SetDelete(&delete_Info);
+      instance.SetDeleteArray(&deleteArray_Info);
+      instance.SetDestructor(&destruct_Info);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::Info*)
+   {
+      return GenerateInitInstanceLocal((::Info*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::Info*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *Info_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::Info*)0x0)->GetClass();
+      Info_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void Info_TClassManip(TClass* theClass){
+      theClass->CreateAttributeMap();
+      TDictAttributeMap* attrMap( theClass->GetAttributeMap() );
+      attrMap->AddProperty("file_name","/home/dnn1488/Desktop/Root/DariaCalib2022Nov22/Macros/./BeamMonitoring_22.cc");
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_Info(void *p) {
+      return  p ? new(p) ::Info : new ::Info;
+   }
+   static void *newArray_Info(Long_t nElements, void *p) {
+      return p ? new(p) ::Info[nElements] : new ::Info[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_Info(void *p) {
+      delete ((::Info*)p);
+   }
+   static void deleteArray_Info(void *p) {
+      delete [] ((::Info*)p);
+   }
+   static void destruct_Info(void *p) {
+      typedef ::Info current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::Info
+
