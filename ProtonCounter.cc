@@ -24,24 +24,24 @@ void FileTimepixName (vector<string> &vec);
 
 vector<pair<Double_t, Double_t>> ProtonCounter(){
 //int ProtonCounter(){
-    
+
     gSystem->cd("/home/dnn1488/Desktop/Root/DariaCalib2022Nov22/TimePixCalib1");
     //gROOT->ProcessLine(".!ls>FileName.txt"); //List of files
-    
+
    //+++++++++++++++++++++++++++++++++++++
-   //OPEN FILE AND READ DATA   
+   //OPEN FILE AND READ DATA
    //+++++++++++++++++++++++++++++++++++++
 
     vector<pair<Double_t, Double_t>> FluxAndError;
     pair<Double_t,Double_t>          FlAndErr;
-    
+
     ifstream fileDir; //Open the RootFile.txt
     fileDir.open("RootFile.txt", ifstream::in); //Stream for reading the file
-    string c; 
+    string c;
     TString c1;
     //vector<string> filenames; // List of files
     Double_t Area, ClusterMax, ClusterArea, ClusterTOT, MeanTOT, MeanArea, Frame, N_TOT, N_Area, lifeTime, N_Mean, sigmaN, Flux, sigmaFlux;
-    Area = sqrt(2)/256;
+    Area = 2;
     TFile* myfile[100];
     TH1D* h1[100];
     TH1D* h2[100];
@@ -59,22 +59,22 @@ vector<pair<Double_t, Double_t>> ProtonCounter(){
           h2[i] = new TH1D();
           h3[i] = new TH1D();
           h4[i] = new TH1D();
-    
+
           h1[i] = (TH1D*)myfile[i] -> Get("fAnalSummary");
           h2[i] = (TH1D*)myfile[i] -> Get("fHisSingleClusterAreaFullStatAboveCut");//fHisSingleClusterAreaFullStatAboveCut
           h3[i] = (TH1D*)myfile[i] -> Get("fHisSingleClusterTOTFullStat");         //fHisSingleClusterTOTFullStat
           h4[i] = (TH1D*)myfile[i] -> Get("fEventSummary");                        //fEventSummary
-    
+
           ClusterMax  = h1[i] -> GetBinContent(1);
           ClusterArea = h1[i] -> GetBinContent(2);
           ClusterTOT  = h1[i] -> GetBinContent(3);
           MeanArea    = h2[i] -> GetMean();
           MeanTOT     = h3[i] -> GetMean();
           Frame       = h4[i] -> GetBinContent(1);
-    
+
           N_TOT     = ClusterTOT/MeanTOT;
           N_Area    = ClusterArea/MeanArea;
-          lifeTime  = Frame*1; //Frame*1ms
+          lifeTime  = Frame*0.001; //Frame*1ms
           N_Mean    = (ClusterMax+N_TOT+N_Area)/3;
           sigmaN    = sqrt(((ClusterMax - N_Mean)*(ClusterMax - N_Mean)+(N_Area - N_Mean)*(N_Area - N_Mean)+(N_TOT - N_Mean)*(N_TOT - N_Mean))/(3-1));
           Flux      = N_Mean/(Area*lifeTime);
@@ -98,19 +98,19 @@ vector<pair<Double_t, Double_t>> ProtonCounter(){
           cout<<"Proton flux: "        <<Flux       << endl;
           cout<<"Sigma flux: "         <<sigmaFlux  << endl;
           cout<<"--------------------------------"  << endl;
-          
+
           ofs << Flux      << endl;
           ofs << sigmaFlux << endl;
-          
+
           FlAndErr = make_pair(Flux, sigmaFlux);
           FluxAndError.push_back(FlAndErr);
-        
+
           FileTimepix.push_back(c);
-        
+
           i++;
       }
     ofs.close();
-   
+
 
 //return 0;
 return FluxAndError;
