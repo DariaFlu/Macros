@@ -766,6 +766,8 @@ extern dataChamber *chamber = new dataChamber;*/
 
         if(j == 22 || j == 11) continue;
         if(g[j].timepixName == "Cal_05mm_1.dat.root") continue;
+        if(g[j].timepixName == "Cal_05mm_4.dat.root") continue;
+        //cout<<pc<<" "<<g[j].timepixName<<" "<<g[j].FluxProton<<endl;
         CalibrationCurve1->Set(pc);
         CalibrationCurve1->SetPoint(pc, g[j].CorrespondCurrent, g[j].FluxProton);
         CalibrationCurve1->SetPointError(pc, g[j].CorrespondCurrentError, g[j].ErFluxProton);
@@ -801,7 +803,7 @@ extern dataChamber *chamber = new dataChamber;*/
     CalibrationCurve1->Draw("AP");
 
     TF1 *func05 = new TF1("f05","[0]*x",0, 1);
-    func05->SetParameter(0, 1500.);
+    func05->SetParameter(0, 15000000.);
 
     CalibrationCurve1->Fit(func05, "R");
 /*
