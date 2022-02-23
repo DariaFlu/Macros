@@ -17,6 +17,8 @@
 #include "TGraph.h"
 #include "TAxis.h"
 #include "TGaxis.h"
+#include "TLegend.h"
+#include "TString.h"
 
 //#include "BeamMonitoring_22.cc"
 
@@ -130,17 +132,39 @@ int BeamProfile(){
 
     position st[100];
 
-    Double_t areaPixel = (sqrt(2)/256)*10; // cm->mm
+    Double_t areaPixel = (sqrt(2)/256)*10000; // cm-> microm
     TFile*   myfile[100];
     TH1D*    h[100];
     TH1D*    h2[100];
     TCanvas* canv[100];
     TCanvas* canv2[100];
     TF1*     fitFun[100];
+    TLegend* leg[100];
+
+    TF1* line  = new TF1("line","[0]",0,1);
+    TF1* line0 = new TF1("line0","[0]",0,1);
 
     int i = 0;
-    int k =1;
+    int k = 1;
+    int io = 0;
+    int ic = 0;
     size_t counter = 0;
+
+    TString aPosition[] = {
+                          //Timepix center (X,Y) +- X mm
+                          "Timepix center (X,Y)",
+                          "Timepix center (X - 3) mm",
+                          "Timepix center (X - 6) mm",
+                          "Timepix center (X + 3) mm",
+                          "Timepix center (X + 6) mm",
+                          "Timepix center (X,Y)",
+                          //Timepix center (X,Y) +- Y mm
+                          "Timepix center (Y + 3) mm",
+                          "Timepix center (Y + 6) mm",
+                          "Timepix center (Y - 3) mm",
+                          "Timepix center (Y - 6) mm"
+                      };
+
     while(getline(fileName,c)){
 
         string check (c.end()-4, c.end());
@@ -156,8 +180,17 @@ int BeamProfile(){
             h[i] -> Fit("gaus","R"," ",5,230);
             fitFun[i] = h[i]->GetFunction("gaus");
             Double_t mean      = fitFun[i]->GetParameter(1);
-            Double_t meanErr = fitFun[i]->GetParError(1);
+            Double_t meanErr   = fitFun[i]->GetParError(1);
             cout<<mean<<endl;
+
+            leg[i] = new TLegend(0.15, 0.15, 0.55, 0.35);
+            line->SetLineColor(9);
+            leg[i]->AddEntry((TObject*) line, aPosition[i]);
+            line0->SetLineColor(2);
+            leg[i]->AddEntry((TObject*) line0, Form("mean = %.1f #pm %.1f #mum", mean*areaPixel , meanErr*areaPixel),"l");
+            leg[i]->SetTextSize(0.045);
+            leg[i] -> Draw();
+
 
             canv2[i] = new TCanvas(Form("canv2%d",i),Form("Align_0mm_%d.dat.root: fHisClusterProfileY",k),0,0,800,500);
             h2[i]    = new TH1D();
@@ -168,11 +201,32 @@ int BeamProfile(){
             Double_t mean1    = fitFun[i+1]->GetParameter(1);
             Double_t mean1Err = fitFun[i+1]->GetParError(1);
 
+            leg[i+1] = new TLegend(0.15, 0.15, 0.55, 0.35);
+            line->SetLineColor(9);
+            leg[i+1]->AddEntry((TObject*) line, aPosition[i]);
+            line0->SetLineColor(2);
+            leg[i+1]->AddEntry((TObject*) line0, Form("mean = %.1f #pm %.1f #mum", mean*areaPixel , meanErr*areaPixel),"l");
+            leg[i+1]->SetTextSize(0.045);
+            leg[i+1] -> Draw();
+
             st[i] = {Form("Align_0mm_%d.dat.root",k),mean*areaPixel,mean1*areaPixel,meanErr*areaPixel,mean1Err*areaPixel};
+
+            canv[i] ->SaveAs(Form("XAlign_0mm_%d.dat.png",k));
+            canv2[i]->SaveAs(Form("YAlign_0mm_%d.dat.png",k));
             i++;
             k++;
+
             counter++;
 
+            // struct position{
+            //
+            //     string  name;
+            //     Double_t xTimepix; // cm
+            //     Double_t yTimepix; // cm
+            //
+            //     Double_t xTimepixError; // cm
+            //     Double_t yTimepixError; // cm
+            // };
         }
     }
 
